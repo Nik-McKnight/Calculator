@@ -179,39 +179,94 @@ namespace GUI
 
         private void ProcessInput(char buttonOrKey)
         {
-            Char[] operators;
+            Char[] standardOperators;
+            Char[] advancedOperators;
 
             // TODO Rest of operators. Fraction and sign-flip may be difficult.
-            operators = new char[]{ '.', 'N', 'F', 'E', 'R', 'C', 'B',
-                '+', '-', '*', '/', '(', ')' };
+            standardOperators = new char[]{ '.', '+', '-', '*', '/', '(', ')' };
 
-            if (char.IsDigit(buttonOrKey) | operators.Contains(buttonOrKey))
+            advancedOperators = new char[] { '=', 'N', 'F', 'E', 'R', 'C', 'B' };
+
+            if (char.IsDigit(buttonOrKey) | standardOperators.Contains(buttonOrKey))
             {
-                calculator.addToFormula(buttonOrKey);
+                calculator.AddToFormula(buttonOrKey);
                 FormulaBox.Text = calculator.getTempFormula();
             }
 
-            if (buttonOrKey.Equals('='))
+            if (advancedOperators.Contains(buttonOrKey))
             {
+                /*if (buttonOrKey.Equals('='))
+                {
+                    string result;
+
+                    result = calculator.Calculate().ToString();
+
+                    FormulaBox.Text = result;
+
+                    DisplayResults();
+                }*/
                 string result;
 
-                result = calculator.Calculate().ToString();
+                switch (buttonOrKey)
+                {
+                    case '=':
+                        result = calculator.Calculate().ToString();
+                        FormulaBox.Text = result;
+                        DisplayResults(result);
+                        break;
 
-                FormulaBox.Text = result;
 
-                DisplayResults();
+                    case 'N':
+                        calculator.InvertFormula();
+                        FormulaBox.Text = calculator.getTempFormula();
+                        break;
+
+
+                    case 'F':
+
+                        break;
+
+
+                    case 'E':
+                        result = calculator.Exponent(2, false).ToString();
+                        FormulaBox.Text = result;
+                        DisplayResults(result);
+                        break;
+
+
+                    case 'R':
+                        result = calculator.Exponent(2, true).ToString();
+                        FormulaBox.Text = result;
+                        DisplayResults(result);
+                        break;
+
+
+                    case 'C':
+                        calculator.ClearFormula();
+                        result = "";
+                        DisplayResults(result);
+                        break;
+
+
+                    case 'B':
+
+                        break;
+                }
             }
+            
 
         }
 
-        private void DisplayResults()
+        private void DisplayResults(string result)
         {
             ResultsBox.Clear();
-            foreach (Result result in calculator.GetAllResults())
+            FormulaBox.Text = result;
+            foreach (Result r in calculator.GetAllResults())
             {
-                ResultsBox.Text += (result.GetFormula() + Environment.NewLine + result.GetValue() + Environment.NewLine + Environment.NewLine) ;
+                ResultsBox.Text += (r.GetFormula() + Environment.NewLine + r.GetValue() + Environment.NewLine + Environment.NewLine) ;
             }
         }
+
     }
 }
 

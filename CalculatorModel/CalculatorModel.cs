@@ -6,6 +6,8 @@ namespace Utilities
     {
         private string tempFormula;
         private List<Result> Results;
+        private double value;
+        private double lastValue;
 
         public Calculator()
         {
@@ -13,16 +15,58 @@ namespace Utilities
             Results = new List<Result>();
         }
 
-        public void addToFormula(char entry)
+        public void AddToFormula(char entry)
         {
             tempFormula += entry;
+        }
+
+        public void ClearFormula()
+        {
+            tempFormula = "";
+        }
+
+        public void InvertFormula()
+        {
+            try
+            {
+                if (tempFormula[0] == '-')
+                {
+                    tempFormula = tempFormula.Substring(1);
+                }
+                else
+                {
+                    tempFormula = "-" + tempFormula;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        public double Exponent(int exp, bool isRoot)
+        {
+            value = Calculate();
+
+            if (!isRoot)
+            {
+                value = Math.Pow(value, exp);
+                Results.Insert(0, new Result(Results[0].GetFormula(), value, exp, 1));
+            }
+
+            else
+            {
+                value = Math.Pow(value, 1.0/exp);
+                Results.Insert(0, new Result(Results[0].GetFormula(), value, 1, exp));
+            }
+
+            lastValue = value;
+            return value;
         }
 
         public double Calculate()
         {
             Formula formula;
-            double value;
-            double lastValue;
 
             try
             {
@@ -47,7 +91,7 @@ namespace Utilities
 
                 formula = new Formula(tempFormula);
                 value = (double)formula.Evaluate(s => 0);
-                Results.Insert(0, new Result(tempFormula, value));
+                Results.Insert(0, new Result(tempFormula, value, 1, 1.0));
                 lastValue = value;
             }
             catch (Exception ex)
@@ -74,16 +118,24 @@ namespace Utilities
         {
             private string formula;
             private double value;
+            private int exp;
+            private double root;
             
-            public Result(string formula, double value)
+            public Result(string formula, double value, int exp, double root)
             {
                 this.formula = formula.ToString();
                 this.value = value;
+                this.exp = exp;
+                this.root = root;
             }
 
+            //TODO Clean up this method
             public string GetFormula()
             {
-                return formula;
+                string output = "";
+                output += formula;
+                output = FormatExponent(output, exp, root);
+                return output;
             }
 
             public double GetValue()
@@ -94,6 +146,27 @@ namespace Utilities
             public string GetString()
             {
                 return (formula.ToString() + "/n" + value + "/n");
+            }
+
+            //TODO Refactor to eliminate root?
+            private string FormatExponent(string formula, int exp, double root)
+            {
+                double oldExp = 1;
+                string output = formula;
+                if (formula.Contains('^'))
+                {
+                    int length = output.IndexOf('^');
+                    oldExp = Convert.ToDouble(output.Substring(length+1));
+                    output = output.Substring(1, length-2);
+                }
+                if ((oldExp * exp / root).Equals(1.0))
+                {
+                    return output;
+                }
+                else
+                {
+                    return "(" + output + ")^" + (oldExp * exp / root).ToString();
+                }
             }
         }
     }
