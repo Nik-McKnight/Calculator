@@ -58,8 +58,9 @@
             // 
             // PosNegButton
             // 
+            this.PosNegButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.PosNegButton.AutoSize = true;
-            this.PosNegButton.Location = new System.Drawing.Point(12, 394);
+            this.PosNegButton.Location = new System.Drawing.Point(12, 321);
             this.PosNegButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.PosNegButton.Name = "PosNegButton";
             this.PosNegButton.Size = new System.Drawing.Size(50, 50);
@@ -70,11 +71,9 @@
             // 
             // ZeroButton
             // 
-            this.ZeroButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ZeroButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ZeroButton.AutoSize = true;
-            this.ZeroButton.Location = new System.Drawing.Point(68, 394);
+            this.ZeroButton.Location = new System.Drawing.Point(68, 321);
             this.ZeroButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.ZeroButton.Name = "ZeroButton";
             this.ZeroButton.Size = new System.Drawing.Size(50, 50);
@@ -85,11 +84,9 @@
             // 
             // DecButton
             // 
-            this.DecButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DecButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.DecButton.AutoSize = true;
-            this.DecButton.Location = new System.Drawing.Point(124, 394);
+            this.DecButton.Location = new System.Drawing.Point(124, 321);
             this.DecButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.DecButton.Name = "DecButton";
             this.DecButton.Size = new System.Drawing.Size(50, 50);
@@ -100,11 +97,9 @@
             // 
             // EqButton
             // 
-            this.EqButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EqButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.EqButton.AutoSize = true;
-            this.EqButton.Location = new System.Drawing.Point(178, 394);
+            this.EqButton.Location = new System.Drawing.Point(178, 321);
             this.EqButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.EqButton.Name = "EqButton";
             this.EqButton.Size = new System.Drawing.Size(50, 50);
@@ -115,11 +110,9 @@
             // 
             // AddButton
             // 
-            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.AddButton.AutoSize = true;
-            this.AddButton.Location = new System.Drawing.Point(178, 338);
+            this.AddButton.Location = new System.Drawing.Point(178, 265);
             this.AddButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(50, 50);
@@ -130,11 +123,9 @@
             // 
             // ThreeButton
             // 
-            this.ThreeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ThreeButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ThreeButton.AutoSize = true;
-            this.ThreeButton.Location = new System.Drawing.Point(124, 338);
+            this.ThreeButton.Location = new System.Drawing.Point(124, 265);
             this.ThreeButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.ThreeButton.Name = "ThreeButton";
             this.ThreeButton.Size = new System.Drawing.Size(50, 50);
@@ -145,11 +136,9 @@
             // 
             // TwoButton
             // 
-            this.TwoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TwoButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.TwoButton.AutoSize = true;
-            this.TwoButton.Location = new System.Drawing.Point(68, 338);
+            this.TwoButton.Location = new System.Drawing.Point(68, 265);
             this.TwoButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.TwoButton.Name = "TwoButton";
             this.TwoButton.Size = new System.Drawing.Size(50, 50);
@@ -160,11 +149,9 @@
             // 
             // OneButton
             // 
-            this.OneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OneButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.OneButton.AutoSize = true;
-            this.OneButton.Location = new System.Drawing.Point(12, 338);
+            this.OneButton.Location = new System.Drawing.Point(12, 265);
             this.OneButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.OneButton.Name = "OneButton";
             this.OneButton.Size = new System.Drawing.Size(50, 50);
@@ -175,11 +162,9 @@
             // 
             // MultButton
             // 
-            this.MultButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MultButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.MultButton.AutoSize = true;
-            this.MultButton.Location = new System.Drawing.Point(178, 226);
+            this.MultButton.Location = new System.Drawing.Point(178, 153);
             this.MultButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.MultButton.Name = "MultButton";
             this.MultButton.Size = new System.Drawing.Size(50, 50);
@@ -190,11 +175,9 @@
             // 
             // NineButton
             // 
-            this.NineButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NineButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.NineButton.AutoSize = true;
-            this.NineButton.Location = new System.Drawing.Point(124, 226);
+            this.NineButton.Location = new System.Drawing.Point(124, 153);
             this.NineButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.NineButton.Name = "NineButton";
             this.NineButton.Size = new System.Drawing.Size(50, 50);
@@ -205,11 +188,9 @@
             // 
             // EightButton
             // 
-            this.EightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EightButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.EightButton.AutoSize = true;
-            this.EightButton.Location = new System.Drawing.Point(68, 226);
+            this.EightButton.Location = new System.Drawing.Point(68, 153);
             this.EightButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.EightButton.Name = "EightButton";
             this.EightButton.Size = new System.Drawing.Size(50, 50);
@@ -220,11 +201,9 @@
             // 
             // SevenButton
             // 
-            this.SevenButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SevenButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SevenButton.AutoSize = true;
-            this.SevenButton.Location = new System.Drawing.Point(12, 226);
+            this.SevenButton.Location = new System.Drawing.Point(12, 153);
             this.SevenButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.SevenButton.Name = "SevenButton";
             this.SevenButton.Size = new System.Drawing.Size(50, 50);
@@ -235,11 +214,9 @@
             // 
             // SubButton
             // 
-            this.SubButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SubButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SubButton.AutoSize = true;
-            this.SubButton.Location = new System.Drawing.Point(178, 282);
+            this.SubButton.Location = new System.Drawing.Point(178, 209);
             this.SubButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.SubButton.Name = "SubButton";
             this.SubButton.Size = new System.Drawing.Size(50, 50);
@@ -250,11 +227,9 @@
             // 
             // SixButton
             // 
-            this.SixButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SixButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SixButton.AutoSize = true;
-            this.SixButton.Location = new System.Drawing.Point(124, 282);
+            this.SixButton.Location = new System.Drawing.Point(124, 209);
             this.SixButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.SixButton.Name = "SixButton";
             this.SixButton.Size = new System.Drawing.Size(50, 50);
@@ -265,11 +240,9 @@
             // 
             // FiveButton
             // 
-            this.FiveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FiveButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FiveButton.AutoSize = true;
-            this.FiveButton.Location = new System.Drawing.Point(68, 282);
+            this.FiveButton.Location = new System.Drawing.Point(68, 209);
             this.FiveButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.FiveButton.Name = "FiveButton";
             this.FiveButton.Size = new System.Drawing.Size(50, 50);
@@ -280,11 +253,9 @@
             // 
             // FourButton
             // 
-            this.FourButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FourButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FourButton.AutoSize = true;
-            this.FourButton.Location = new System.Drawing.Point(12, 282);
+            this.FourButton.Location = new System.Drawing.Point(12, 209);
             this.FourButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.FourButton.Name = "FourButton";
             this.FourButton.Size = new System.Drawing.Size(50, 50);
@@ -295,11 +266,9 @@
             // 
             // BackButton
             // 
-            this.BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BackButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BackButton.AutoSize = true;
-            this.BackButton.Location = new System.Drawing.Point(178, 114);
+            this.BackButton.Location = new System.Drawing.Point(178, 41);
             this.BackButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(50, 50);
@@ -310,11 +279,9 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ClearButton.AutoSize = true;
-            this.ClearButton.Location = new System.Drawing.Point(124, 114);
+            this.ClearButton.Location = new System.Drawing.Point(124, 41);
             this.ClearButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -326,11 +293,9 @@
             // 
             // RightParButton
             // 
-            this.RightParButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RightParButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.RightParButton.AutoSize = true;
-            this.RightParButton.Location = new System.Drawing.Point(68, 114);
+            this.RightParButton.Location = new System.Drawing.Point(68, 41);
             this.RightParButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.RightParButton.Name = "RightParButton";
             this.RightParButton.Size = new System.Drawing.Size(50, 50);
@@ -341,11 +306,9 @@
             // 
             // LeftParButton
             // 
-            this.LeftParButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LeftParButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LeftParButton.AutoSize = true;
-            this.LeftParButton.Location = new System.Drawing.Point(12, 114);
+            this.LeftParButton.Location = new System.Drawing.Point(12, 41);
             this.LeftParButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.LeftParButton.Name = "LeftParButton";
             this.LeftParButton.Size = new System.Drawing.Size(50, 50);
@@ -356,11 +319,9 @@
             // 
             // DivButton
             // 
-            this.DivButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DivButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.DivButton.AutoSize = true;
-            this.DivButton.Location = new System.Drawing.Point(178, 170);
+            this.DivButton.Location = new System.Drawing.Point(178, 97);
             this.DivButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.DivButton.Name = "DivButton";
             this.DivButton.Size = new System.Drawing.Size(50, 50);
@@ -371,11 +332,9 @@
             // 
             // RootButton
             // 
-            this.RootButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RootButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.RootButton.AutoSize = true;
-            this.RootButton.Location = new System.Drawing.Point(124, 170);
+            this.RootButton.Location = new System.Drawing.Point(124, 97);
             this.RootButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.RootButton.Name = "RootButton";
             this.RootButton.Size = new System.Drawing.Size(50, 50);
@@ -386,11 +345,9 @@
             // 
             // ExpButton
             // 
-            this.ExpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExpButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ExpButton.AutoSize = true;
-            this.ExpButton.Location = new System.Drawing.Point(68, 170);
+            this.ExpButton.Location = new System.Drawing.Point(68, 97);
             this.ExpButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.ExpButton.Name = "ExpButton";
             this.ExpButton.Size = new System.Drawing.Size(50, 50);
@@ -401,11 +358,9 @@
             // 
             // FracButton
             // 
-            this.FracButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FracButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FracButton.AutoSize = true;
-            this.FracButton.Location = new System.Drawing.Point(12, 170);
+            this.FracButton.Location = new System.Drawing.Point(12, 97);
             this.FracButton.MinimumSize = new System.Drawing.Size(50, 50);
             this.FracButton.Name = "FracButton";
             this.FracButton.Size = new System.Drawing.Size(50, 50);
@@ -416,10 +371,9 @@
             // 
             // ResultsBox
             // 
-            this.ResultsBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResultsBox.Location = new System.Drawing.Point(234, 114);
+            this.ResultsBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ResultsBox.Enabled = false;
+            this.ResultsBox.Location = new System.Drawing.Point(234, 41);
             this.ResultsBox.Multiline = true;
             this.ResultsBox.Name = "ResultsBox";
             this.ResultsBox.Size = new System.Drawing.Size(135, 330);
@@ -427,13 +381,11 @@
             // 
             // FormulaBox
             // 
-            this.FormulaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FormulaBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FormulaBox.Enabled = false;
             this.FormulaBox.Location = new System.Drawing.Point(12, 12);
-            this.FormulaBox.Multiline = true;
             this.FormulaBox.Name = "FormulaBox";
-            this.FormulaBox.Size = new System.Drawing.Size(357, 96);
+            this.FormulaBox.Size = new System.Drawing.Size(357, 23);
             this.FormulaBox.TabIndex = 25;
             this.FormulaBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -441,7 +393,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 457);
+            this.ClientSize = new System.Drawing.Size(385, 384);
             this.Controls.Add(this.FormulaBox);
             this.Controls.Add(this.ResultsBox);
             this.Controls.Add(this.BackButton);

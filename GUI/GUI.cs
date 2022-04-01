@@ -166,10 +166,101 @@ namespace GUI
             {
                 // Allows data to be entered by hitting enter
                 case Keys.Enter:
-                    Debug.WriteLine("enter");
+                    ProcessInput('=');
                     break;
 
+                case Keys.Back:
+                    ProcessInput('B');
+                    break;
 
+                case Keys.OemPeriod:
+                    ProcessInput('.');
+                    break;
+
+                case Keys.Oemplus:
+                    ProcessInput('+');
+                    break;
+
+                case Keys.OemMinus:
+                    ProcessInput('-');
+                    break;
+
+                //TODO Figure out these operators
+                /*case Keys.:
+                    ProcessInput('*');
+                    break;
+
+                case Keys.:
+                    ProcessInput('/');
+                    break; 
+
+                case Keys.:
+                    ProcessInput('(');
+                    break;
+
+                case Keys.:
+                    ProcessInput(')');
+                    break;*/
+
+                case Keys.N:
+                    ProcessInput('N');
+                    break;
+
+                case Keys.F:
+                    ProcessInput('F');
+                    break;
+
+                case Keys.E:
+                    ProcessInput('E');
+                    break;
+
+                case Keys.R:
+                    ProcessInput('R');
+                    break;
+
+                case Keys.C:
+                    ProcessInput('C');
+                    break;
+
+                case Keys.D0:
+                    ProcessInput('0');
+                    break;
+
+                case Keys.D1:
+                    ProcessInput('1');
+                    break;
+
+                case Keys.D2:
+                    ProcessInput('2');
+                    break;
+
+                case Keys.D3:
+                    ProcessInput('3');
+                    break;
+
+                case Keys.D4:
+                    ProcessInput('4');
+                    break;
+
+                case Keys.D5:
+                    ProcessInput('5');
+                    break;
+
+                case Keys.D6:
+                    ProcessInput('6');
+                    break;
+
+                case Keys.D7:
+                    ProcessInput('7');
+                    break;
+
+                case Keys.D8:
+                    ProcessInput('8');
+                    break;
+
+                case Keys.D9:
+                    ProcessInput('9');
+                    break;
 
                 default:
                     return base.ProcessCmdKey(ref msg, keyData);
@@ -195,16 +286,6 @@ namespace GUI
 
             if (advancedOperators.Contains(buttonOrKey))
             {
-                /*if (buttonOrKey.Equals('='))
-                {
-                    string result;
-
-                    result = calculator.Calculate().ToString();
-
-                    FormulaBox.Text = result;
-
-                    DisplayResults();
-                }*/
                 string result;
 
                 switch (buttonOrKey)
@@ -223,7 +304,8 @@ namespace GUI
 
 
                     case 'F':
-
+                        calculator.Fraction();
+                        FormulaBox.Text = calculator.getTempFormula();
                         break;
 
 
@@ -249,7 +331,8 @@ namespace GUI
 
 
                     case 'B':
-
+                        calculator.Backspace();
+                        FormulaBox.Text = calculator.getTempFormula();
                         break;
                 }
             }

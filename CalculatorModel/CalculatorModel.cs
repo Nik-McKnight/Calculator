@@ -20,6 +20,11 @@ namespace Utilities
             tempFormula += entry;
         }
 
+        public void Backspace()
+        {
+            tempFormula = tempFormula.Substring(0, tempFormula.Length - 1);
+        }
+
         public void ClearFormula()
         {
             tempFormula = "";
@@ -64,6 +69,15 @@ namespace Utilities
             return value;
         }
 
+        public void Fraction()
+        {
+            if (tempFormula.Length > 0)
+            {
+                tempFormula = "1/" + tempFormula;
+            }
+        }
+
+        //TODO Make 5(5+5) equivalent to 5*(5+5)
         public double Calculate()
         {
             Formula formula;
@@ -85,7 +99,7 @@ namespace Utilities
                     Debug.WriteLine("hi");
                 }
 
-                else if (!Char.IsDigit(tempFormula[0])) {
+                else if (!Char.IsDigit(tempFormula[0]) & tempFormula[0] != '(') {
                     tempFormula = lastValue.ToString() + tempFormula;
                 }
 
