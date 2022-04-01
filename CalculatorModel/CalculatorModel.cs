@@ -162,7 +162,6 @@ namespace Utilities
                 return (formula.ToString() + "/n" + value + "/n");
             }
 
-            //TODO Refactor to eliminate root?
             private string FormatExponent(string formula, int exp, double root)
             {
                 double oldExp = 1;
