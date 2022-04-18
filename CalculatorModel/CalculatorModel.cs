@@ -8,6 +8,7 @@ namespace Utilities
         private List<Result> Results;
         private double value;
         private double lastValue;
+        char lastEntry;
 
         public Calculator()
         {
@@ -17,7 +18,20 @@ namespace Utilities
 
         public void AddToFormula(char entry)
         {
+            try
+            {
+                if ((Char.IsDigit(lastEntry) & entry == '(') |
+                    (lastEntry == ')' & Char.IsDigit(entry)))
+                {
+                    tempFormula += '*';
+                }
+            }
+            catch
+            {
+
+            }
             tempFormula += entry;
+            lastEntry = entry;
         }
 
         public void Backspace()
@@ -77,7 +91,6 @@ namespace Utilities
             }
         }
 
-        //TODO Make 5(5+5) equivalent to 5*(5+5)
         public double Calculate()
         {
             Formula formula;
@@ -114,7 +127,6 @@ namespace Utilities
             }
 
             tempFormula = "";
-
             return value;
         }
 
