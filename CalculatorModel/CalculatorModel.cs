@@ -69,16 +69,15 @@ namespace Utilities
 
             if (!isRoot)
             {
-                value = Math.Pow(value, exp);
+                value = checkForRound(Math.Pow(value, exp));
                 Results.Insert(0, new Result(Results[0].GetFormula(), value, exp, 1));
             }
 
             else
             {
-                value = Math.Pow(value, 1.0/exp);
+                value = checkForRound(Math.Pow(value, 1.0/exp));
                 Results.Insert(0, new Result(Results[0].GetFormula(), value, 1, exp));
             }
-
             lastValue = value;
             return value;
         }
@@ -109,7 +108,6 @@ namespace Utilities
                 if (tempFormula == "")
                 {
                     return lastValue;
-                    Debug.WriteLine("hi");
                 }
 
                 else if (!Char.IsDigit(tempFormula[0]) & tempFormula[0] != '(') {
@@ -117,11 +115,11 @@ namespace Utilities
                 }
 
                 formula = new Formula(tempFormula);
-                value = (double)formula.Evaluate(s => 0);
+                value = checkForRound((double)formula.Evaluate(s => 0));
                 Results.Insert(0, new Result(tempFormula, value, 1, 1.0));
                 lastValue = value;
             }
-            catch (Exception ex)
+            catch
             {
                 value = 0;
             }
@@ -138,6 +136,17 @@ namespace Utilities
         public string getTempFormula()
         {
             return tempFormula;
+        }
+
+        public double checkForRound(double value)
+        {
+            int nearestInt;
+            nearestInt = (int)Math.Round(value);
+            if (Math.Abs((double)nearestInt - value) <= 0.0000000001)
+            {
+                value = nearestInt;
+            }
+            return value;
         }
 
         public struct Result

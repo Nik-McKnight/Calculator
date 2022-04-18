@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class Form1
+    partial class StandardCalculator
     {
         /// <summary>
         ///  Required designer variable.
@@ -434,7 +434,7 @@
             this.UpButton.UseVisualStyleBackColor = true;
             this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
             // 
-            // Form1
+            // StandardCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -470,10 +470,8 @@
             this.Controls.Add(this.ZeroButton);
             this.Controls.Add(this.PosNegButton);
             this.MinimumSize = new System.Drawing.Size(50, 50);
-            this.Name = "Form1";
+            this.Name = "StandardCalculator";
             this.Text = "Calculator";
-            //this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            //this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -26,12 +26,12 @@ using Utilities;
 
 namespace GUI
 {
-    public partial class Form1 : Form
+    public partial class StandardCalculator : Form
     {
         private Calculator calculator;
         private bool shift;
 
-        public Form1()
+        public StandardCalculator()
         {
             calculator = new Calculator();
             shift = false;

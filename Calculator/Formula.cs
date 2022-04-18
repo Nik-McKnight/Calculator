@@ -84,9 +84,8 @@ namespace Utilities
                 ParseInput(inputString);
                 //value = (double)this.Evaluate(s => 0);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
             }
         }
 
@@ -126,9 +125,8 @@ namespace Utilities
                 ParseInput(inputString);
                 //value = (double)this.Evaluate(Lookup);
             }
-            catch (Exception ex)
+            catch 
             {
-                throw ex;
             }
         }
 
@@ -233,7 +231,7 @@ namespace Utilities
                         {
                             tempNum = Lookup(tempString);
                         }
-                        catch (Exception ex)
+                        catch
                         {
                             return new FormulaError("Unknown variable");
                         }
