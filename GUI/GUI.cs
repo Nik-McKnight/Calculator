@@ -1,15 +1,10 @@
 // TODO Resize buttons/boxes when window resized
-// TODO Scientific
-// TODO Saved results to memory to use as variables
-// TODO Fit to window
+// TODO Unit Testing
 // TODO Readme
 // TODO Comment on everything possible
-// TODO Fix issue with floating point precision (like on squaring then rooting)
-// TODO Refactor/Rebuild Formula
-// TODO Unit Testing
-// TODO Make shift keys work
-// TODO 
-// TODO 
+// TODO Scientific (future release)
+// TODO Saved results to memory to use as variables (future release)
+// TODO Refactor/Rebuild Formula (future release)
 // TODO 
 // TODO 
 // TODO 
@@ -29,13 +24,39 @@ namespace GUI
     public partial class StandardCalculator : Form
     {
         private Calculator calculator;
-        private bool shift;
+        int buttonWidth;
+        int buttonHeight;
+        int PADDING = 10;
 
         public StandardCalculator()
         {
             calculator = new Calculator();
-            shift = false;
             InitializeComponent();
+            this.Width = 500;
+            this.Height = 500;
+            resizeElements();
+        }
+
+        private void resizeElements()
+        {
+            buttonWidth = (this.Width - 7 * PADDING) / 6;
+            buttonHeight = (this.Height - 8 * PADDING) / 8;
+
+            DownButton.Left = PADDING;
+            DownButton.Top = 3 * PADDING;
+
+            DownButton.Width = buttonWidth;
+
+            PowerBox.Left = DownButton.Right + PADDING;
+            PowerBox.Top = 3 * PADDING;
+            PowerBox.Width = buttonWidth;
+
+            PowerLabel.Left = (PowerBox.Right + PowerBox.Left) / 2 - 5;
+            PowerLabel.Top = PADDING;
+
+            UpButton.Left = PowerBox.Right + PADDING;
+            UpButton.Top = 3 * PADDING;
+            UpButton.Width = buttonWidth;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -63,7 +84,7 @@ namespace GUI
                     ProcessInput('-');
                     break;
 
-                //TODO Figure out these operators
+                //TODO Figure out these operators (future release)
                 /*case Keys.:
                     ProcessInput('*');
                     break;
@@ -160,24 +181,6 @@ namespace GUI
             }
             return true;
         }
-
-        /*private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Shift | e.KeyCode == Keys.ShiftKey | e.KeyCode == Keys.LShiftKey | e.KeyCode == Keys.RShiftKey)
-            {
-                shift = true;
-                Debug.WriteLine(shift);
-            }
-        }
-
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Shift | e.KeyCode == Keys.ShiftKey | e.KeyCode == Keys.LShiftKey | e.KeyCode == Keys.RShiftKey)
-            {
-                shift = false;
-                Debug.WriteLine(shift);
-            }
-        }*/
 
         private void ProcessInput(char buttonOrKey)
         {
@@ -394,6 +397,11 @@ namespace GUI
         private void DownButton_Click(object sender, EventArgs e)
         {
             ChangePower(-1);
+        }
+
+        private void StandardCalculator_Resize(object sender, EventArgs e)
+        {
+            resizeElements();
         }
     }
 }

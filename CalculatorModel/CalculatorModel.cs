@@ -164,7 +164,6 @@ namespace Utilities
                 this.root = root;
             }
 
-            //TODO Clean up this method
             public string GetFormula()
             {
                 string output = "";
