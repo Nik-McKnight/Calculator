@@ -378,7 +378,6 @@
             this.ResultsBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ResultsBox.Enabled = false;
             this.ResultsBox.Location = new System.Drawing.Point(285, 88);
-            this.ResultsBox.MinimumSize = new System.Drawing.Size(135, 330);
             this.ResultsBox.Multiline = true;
             this.ResultsBox.Name = "ResultsBox";
             this.ResultsBox.Size = new System.Drawing.Size(135, 330);
@@ -389,7 +388,6 @@
             this.FormulaBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FormulaBox.Enabled = false;
             this.FormulaBox.Location = new System.Drawing.Point(63, 59);
-            this.FormulaBox.MinimumSize = new System.Drawing.Size(357, 23);
             this.FormulaBox.Name = "FormulaBox";
             this.FormulaBox.Size = new System.Drawing.Size(357, 23);
             this.FormulaBox.TabIndex = 25;
@@ -477,7 +475,7 @@
             this.Controls.Add(this.DecButton);
             this.Controls.Add(this.ZeroButton);
             this.Controls.Add(this.PosNegButton);
-            this.MinimumSize = new System.Drawing.Size(500, 500);
+            this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "StandardCalculator";
             this.Text = "Calculator";
             this.Resize += new System.EventHandler(this.StandardCalculator_Resize);

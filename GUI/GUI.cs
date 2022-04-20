@@ -26,37 +26,176 @@ namespace GUI
         private Calculator calculator;
         int buttonWidth;
         int buttonHeight;
-        int PADDING = 10;
+        int PADDING = 5;
 
         public StandardCalculator()
         {
             calculator = new Calculator();
             InitializeComponent();
-            this.Width = 500;
-            this.Height = 500;
+            this.Width = 490;
+            this.Height = 560;
             resizeElements();
         }
 
+        //TODO There has to be an easier way to do this (future release?)
         private void resizeElements()
         {
-            buttonWidth = (this.Width - 7 * PADDING) / 6;
+            // Top Row
+            buttonWidth = (this.Width - 8 * PADDING) / 7;
             buttonHeight = (this.Height - 8 * PADDING) / 8;
 
             DownButton.Left = PADDING;
-            DownButton.Top = 3 * PADDING;
-
+            DownButton.Top = 7 * PADDING;
             DownButton.Width = buttonWidth;
 
             PowerBox.Left = DownButton.Right + PADDING;
-            PowerBox.Top = 3 * PADDING;
+            PowerBox.Top = 7 * PADDING;
             PowerBox.Width = buttonWidth;
 
-            PowerLabel.Left = (PowerBox.Right + PowerBox.Left) / 2 - 5;
-            PowerLabel.Top = PADDING;
+            PowerLabel.Left = (PowerBox.Right + PowerBox.Left) / 2 - 20;
+            PowerLabel.Top = 2 * PADDING;
 
             UpButton.Left = PowerBox.Right + PADDING;
-            UpButton.Top = 3 * PADDING;
+            UpButton.Top = 7 * PADDING;
             UpButton.Width = buttonWidth;
+
+            // Formula Box
+            FormulaBox.Left = PADDING;
+            FormulaBox.Top = UpButton.Bottom + PADDING;
+            FormulaBox.Width = (7 * buttonWidth) + (3 * PADDING);
+            FormulaBox.Height = 25;
+
+            // Second Row
+            LeftParButton.Left = PADDING;
+            LeftParButton.Top = FormulaBox.Bottom + PADDING;
+            LeftParButton.Width = buttonWidth;
+            LeftParButton.Height = buttonHeight;
+
+            RightParButton.Left = LeftParButton.Right + PADDING;
+            RightParButton.Top = FormulaBox.Bottom + PADDING;
+            RightParButton.Width = buttonWidth;
+            RightParButton.Height = buttonHeight;
+
+            ClearButton.Left = RightParButton.Right + PADDING;
+            ClearButton.Top = FormulaBox.Bottom + PADDING;
+            ClearButton.Width = buttonWidth;
+            ClearButton.Height = buttonHeight;
+
+            BackButton.Left = ClearButton.Right + PADDING;
+            BackButton.Top = FormulaBox.Bottom + PADDING;
+            BackButton.Width = buttonWidth;
+            BackButton.Height = buttonHeight;
+
+            // Third Row
+            FracButton.Left = PADDING;
+            FracButton.Top = LeftParButton.Bottom + PADDING;
+            FracButton.Width = buttonWidth;
+            FracButton.Height = buttonHeight;
+
+            ExpButton.Left = FracButton.Right + PADDING;
+            ExpButton.Top = LeftParButton.Bottom + PADDING;
+            ExpButton.Width = buttonWidth;
+            ExpButton.Height = buttonHeight;
+
+            RootButton.Left = ExpButton.Right + PADDING;
+            RootButton.Top = LeftParButton.Bottom + PADDING;
+            RootButton.Width = buttonWidth;
+            RootButton.Height = buttonHeight;
+
+            DivButton.Left = RootButton.Right + PADDING;
+            DivButton.Top = LeftParButton.Bottom + PADDING;
+            DivButton.Width = buttonWidth;
+            DivButton.Height = buttonHeight;
+
+            // Fourth Row
+            SevenButton.Left = PADDING;
+            SevenButton.Top = FracButton.Bottom + PADDING;
+            SevenButton.Width = buttonWidth;
+            SevenButton.Height = buttonHeight;
+
+            EightButton.Left = SevenButton.Right + PADDING;
+            EightButton.Top = FracButton.Bottom + PADDING;
+            EightButton.Width = buttonWidth;
+            EightButton.Height = buttonHeight;
+
+            NineButton.Left = EightButton.Right + PADDING;
+            NineButton.Top = FracButton.Bottom + PADDING;
+            NineButton.Width = buttonWidth;
+            NineButton.Height = buttonHeight;
+
+            MultButton.Left = NineButton.Right + PADDING;
+            MultButton.Top = FracButton.Bottom + PADDING;
+            MultButton.Width = buttonWidth;
+            MultButton.Height = buttonHeight;
+
+            // Fifth Row
+            FourButton.Left = PADDING;
+            FourButton.Top = MultButton.Bottom + PADDING;
+            FourButton.Width = buttonWidth;
+            FourButton.Height = buttonHeight;
+
+            FiveButton.Left = FourButton.Right + PADDING;
+            FiveButton.Top = MultButton.Bottom + PADDING;
+            FiveButton.Width = buttonWidth;
+            FiveButton.Height = buttonHeight;
+
+            SixButton.Left = FiveButton.Right + PADDING;
+            SixButton.Top = MultButton.Bottom + PADDING;
+            SixButton.Width = buttonWidth;
+            SixButton.Height = buttonHeight;
+
+            SubButton.Left = SixButton.Right + PADDING;
+            SubButton.Top = MultButton.Bottom + PADDING;
+            SubButton.Width = buttonWidth;
+            SubButton.Height = buttonHeight;
+
+            // Sixth Row
+            OneButton.Left = PADDING;
+            OneButton.Top = SubButton.Bottom + PADDING;
+            OneButton.Width = buttonWidth;
+            OneButton.Height = buttonHeight;
+
+            TwoButton.Left = OneButton.Right + PADDING;
+            TwoButton.Top = SubButton.Bottom + PADDING;
+            TwoButton.Width = buttonWidth;
+            TwoButton.Height = buttonHeight;
+
+            ThreeButton.Left = TwoButton.Right + PADDING;
+            ThreeButton.Top = SubButton.Bottom + PADDING;
+            ThreeButton.Width = buttonWidth;
+            ThreeButton.Height = buttonHeight;
+
+            AddButton.Left = ThreeButton.Right + PADDING;
+            AddButton.Top = SubButton.Bottom + PADDING;
+            AddButton.Width = buttonWidth;
+            AddButton.Height = buttonHeight;
+
+            // Seven Row
+            PosNegButton.Left = PADDING;
+            PosNegButton.Top = AddButton.Bottom + PADDING;
+            PosNegButton.Width = buttonWidth;
+            PosNegButton.Height = buttonHeight;
+
+            ZeroButton.Left = PosNegButton.Right + PADDING;
+            ZeroButton.Top = AddButton.Bottom + PADDING;
+            ZeroButton.Width = buttonWidth;
+            ZeroButton.Height = buttonHeight;
+
+            DecButton.Left = ZeroButton.Right + PADDING;
+            DecButton.Top = AddButton.Bottom + PADDING;
+            DecButton.Width = buttonWidth;
+            DecButton.Height = buttonHeight;
+
+            EqButton.Left = DecButton.Right + PADDING;
+            EqButton.Top = AddButton.Bottom + PADDING;
+            EqButton.Width = buttonWidth;
+            EqButton.Height = buttonHeight;
+
+            // Results Box
+            ResultsBox.Left = BackButton.Right + PADDING;
+            ResultsBox.Top = FormulaBox.Bottom + PADDING;
+            ResultsBox.Width = FormulaBox.Right - ResultsBox.Left;
+            ResultsBox.Height = EqButton.Bottom - BackButton.Top;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -158,14 +297,7 @@ namespace GUI
                     break;
 
                 case Keys.D9:
-                    if (shift == true)
-                    {
-                        ProcessInput('(');
-                    }
-                    else
-                    {
-                        ProcessInput('9');
-                    }
+                    ProcessInput('9');
                     break;
 
                 case Keys.Up:
