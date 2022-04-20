@@ -1,5 +1,18 @@
-﻿namespace GUI
+﻿/// <summary>
+/// Author: Nik McKnight
+/// Date: 4/20/2022
+/// 
+/// This partial class represents the View of the calculator in an MVC architecture.
+/// 
+/// This code is entirely auto-generated.
+/// </summary>
+
+
+namespace GUI
 {
+    /// <summary>
+    /// The calculator view.
+    /// </summary>
     partial class StandardCalculator
     {
         /// <summary>
@@ -356,7 +369,7 @@
             this.ExpButton.Name = "ExpButton";
             this.ExpButton.Size = new System.Drawing.Size(50, 50);
             this.ExpButton.TabIndex = 17;
-            this.ExpButton.Text = "x^2";
+            this.ExpButton.Text = "x^n";
             this.ExpButton.UseVisualStyleBackColor = true;
             this.ExpButton.Click += new System.EventHandler(this.ExpButton_Click);
             // 

@@ -1,27 +1,13 @@
-﻿// Skeleton written by Joe Zachary for CS 3500, September 2013
-// Read the entire skeleton carefully and completely before you
-// do anything else!
-
-// Version 1.1 (9/22/13 11:45 a.m.)
-
-// Change log:
-//  (Version 1.1) Repaired mistake in GetTokens
-//  (Version 1.1) Changed specification of second constructor to
-//                clarify description of how validation works
-
-// (Daniel Kopta) 
-// Version 1.2 (9/10/17) 
-
-// Change log:
-//  (Version 1.2) Changed the definition of equality with regards
-//                to numeric tokens
-
-/// <summary>
+﻿/// <summary>
+/// Author: Nik McKnight
+/// Date: 4/20/2022
+/// 
+/// This class calculates the result of a given string.
 /// 
 /// This class is a modified version of the Formula class from the following repository:
 /// https://github.com/Nik-McKnight/Spreadsheet-Project
-/// 
 /// </summary>
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
