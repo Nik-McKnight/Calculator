@@ -293,20 +293,18 @@ namespace Utilities
             /// <returns></returns>
             private string FormatExponent(string formula, int exp, double root)
             {
-                // TODO Make this show 1/2 instead of 0.5 for roots.
-
                 // The exponent of the input formula.
                 double oldExp = 1;
                 double newExp = exp;
                 string output = formula;
 
-                // Reformats the formula if it has an exponent other than 1.
+                // Checks if  the formula if it has an exponent other than 1.
                 if (formula.Contains('^'))
                 {
                     int length = output.IndexOf('^');
 
                     // Determines the old exponent from the input string.
-                    oldExp = Convert.ToDouble(output.Substring(length+1));
+                    oldExp = PowerFromString(output.Substring(length+1));
 
                     // Removes the exponent formatting and parentheses from the string.
                     output = output.Substring(1, length-2);
@@ -314,6 +312,7 @@ namespace Utilities
 
                 // Calculates the new exponent.
                 newExp = oldExp * exp / root;
+
                 // Returns the formula with no extra formatting if the new exponent is 1.
                 if (newExp.Equals(1.0))
                 {
@@ -323,9 +322,64 @@ namespace Utilities
                 // Reformats the formula to show the new exponent.
                 else
                 {
-                    return "(" + output + ")^" + newExp.ToString();
+                    return "(" + output + ")^" + PowerToString(newExp);
                 }
+            }
+
+            /// <summary>
+            /// Converts an integer or fractional power (e.g. 1 or 1/4) to a double (1.0 or 0.25)
+            /// </summary>
+            /// <param name="powerString">The input power in string format.</param>
+            /// <returns>The power as a double.</returns>
+            private double PowerFromString(string powerString)
+            {
+                // Default power
+                double power = 1;
+
+                // If the input string is a fraction
+                if (powerString.Contains('/'))
+                {
+                    // Gets the denominator
+                    string tempString = powerString.Substring(3, powerString.Length - 4);
+                    
+                    // Converts that denominator to a double
+                    power = 1 / Convert.ToDouble(tempString);
+                }
+
+                // If the input string is an integer
+                else
+                {
+                    power = Convert.ToDouble(powerString);
+                }
+
+                return power;
+            }
+
+            /// <summary>
+            /// Converts a double (1.0 or 0.25) to an integer or fractional power.
+            /// </summary>
+            /// <param name="power">The input power as a double.</param>
+            /// <returns>The power as a string.</returns>
+            private string PowerToString(double power)
+            {
+                string powerString = "";
+
+                if (power < 1)
+                {
+                    // Converts the decimal power to an int
+                    int tempPower = (int)(1 / power);
+
+                    // Formats it as a fractional power string
+                    powerString = $"(1/{tempPower})";
+                }
+
+                else
+                {
+                    powerString = power.ToString();
+                }
+
+                return powerString;
             }
         }
     }
-}
+} 
