@@ -5,10 +5,6 @@
 /// This partial class represents the Controller of the calculator in an MVC architecture.
 /// </summary>
 
-
-// TODO Unit Testing
-// TODO Comment on everything possible
-// TODO Readme
 // TODO Scientific (future release)
 // TODO Saved results to memory to use as variables (future release)
 // TODO Refactor/Rebuild Formula (future release)
@@ -194,7 +190,7 @@ namespace GUI
                 calculator.AddToFormula(buttonOrKey);
 
                 // Gets the formula string from the calculator object and shows it on the GUI
-                FormulaBox.Text = calculator.getTempFormula();
+                FormulaBox.Text = calculator.GetTempFormula();
             }
 
             // Checks if the input is an advanced operator
@@ -214,13 +210,13 @@ namespace GUI
                     // Inverts sign of formula (+/- button)
                     case 'N':
                         calculator.InvertFormula();
-                        FormulaBox.Text = calculator.getTempFormula();
+                        FormulaBox.Text = calculator.GetTempFormula();
                         break;
 
                     // Sets the current formula to be the denominator of a fraction (1/x button)
                     case 'F':
                         calculator.Fraction();
-                        FormulaBox.Text = calculator.getTempFormula();
+                        FormulaBox.Text = calculator.GetTempFormula();
                         break;
 
                     // Calculates the current formula to the n power given in the power box. (x^n button)
@@ -248,7 +244,7 @@ namespace GUI
                     // TODO Modify this so it undoes the last entrey, rather than simply deleting the last entered char
                     case 'B':
                         calculator.Backspace();
-                        FormulaBox.Text = calculator.getTempFormula();
+                        FormulaBox.Text = calculator.GetTempFormula();
                         break;
                 }
             }

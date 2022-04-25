@@ -103,34 +103,6 @@ namespace Utilities
         }
 
         /// <summary>
-        /// Performs exponential operations on the current function.
-        /// </summary>
-        /// <param name="exp">The given power.</param>
-        /// <param name="isRoot">Represents whether the operation is a root or not.</param>
-        /// <returns></returns>
-        public double Exponent(int exp, bool isRoot)
-        {
-            value = Calculate();
-
-            // Performs exponential function
-            if (!isRoot)
-            {
-                value = checkForRound(Math.Pow(value, exp));
-                Results.Insert(0, new Result(Results[0].GetFormula(), value, exp, 1));
-            }
-
-            // Performs root function
-            else
-            {
-                value = checkForRound(Math.Pow(value, 1.0/exp));
-                Results.Insert(0, new Result(Results[0].GetFormula(), value, 1, exp));
-            }
-
-            lastValue = value;
-            return value;
-        }
-
-        /// <summary>
         /// Sets the current function to be the denominator of a fraction.
         /// </summary>
         public void Fraction()
@@ -140,6 +112,7 @@ namespace Utilities
                 tempFormula = "1/" + tempFormula;
             }
         }
+
 
         /// <summary>
         /// Converts the tempFormula into a formula object and calculates the result.
@@ -178,7 +151,7 @@ namespace Utilities
                 formula = new Formula(tempFormula);
 
                 // Checks to see if a decimal value needs to be rounded off.
-                value = checkForRound((double)formula.Evaluate(s => 0));
+                value = CheckForRound((double)formula.Evaluate(s => 0));
 
                 // Inserts this result into the list of results.
                 Results.Insert(0, new Result(tempFormula, value, 1, 1.0));
@@ -190,6 +163,34 @@ namespace Utilities
             }
 
             tempFormula = "";
+            return value;
+        }
+
+        /// <summary>
+        /// Performs exponential operations on the current function.
+        /// </summary>
+        /// <param name="exp">The given power.</param>
+        /// <param name="isRoot">Represents whether the operation is a root or not.</param>
+        /// <returns></returns>
+        public double Exponent(int exp, bool isRoot)
+        {
+            value = Calculate();
+
+            // Performs exponential function
+            if (!isRoot)
+            {
+                value = CheckForRound(Math.Pow(value, exp));
+                Results.Insert(0, new Result(Results[0].GetFormula(), value, exp, 1));
+            }
+
+            // Performs root function
+            else
+            {
+                value = CheckForRound(Math.Pow(value, 1.0/exp));
+                Results.Insert(0, new Result(Results[0].GetFormula(), value, 1, exp));
+            }
+
+            lastValue = value;
             return value;
         }
 
@@ -206,7 +207,7 @@ namespace Utilities
         /// Self-Explanatory
         /// </summary>
         /// <returns></returns>
-        public string getTempFormula()
+        public string GetTempFormula()
         {
             return tempFormula;
         }
@@ -218,7 +219,7 @@ namespace Utilities
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public double checkForRound(double value)
+        public double CheckForRound(double value)
         {
             int nearestInt;
             nearestInt = (int)Math.Round(value);
@@ -291,7 +292,7 @@ namespace Utilities
             /// <param name="exp">The exponent power.</param>
             /// <param name="root">The root power.</param>
             /// <returns></returns>
-            private string FormatExponent(string formula, int exp, double root)
+            public string FormatExponent(string formula, int exp, double root)
             {
                 // The exponent of the input formula.
                 double oldExp = 1;
@@ -317,6 +318,12 @@ namespace Utilities
                 if (newExp.Equals(1.0))
                 {
                     return output;
+                }
+
+                // Check for power of 0;
+                if (newExp.Equals(0.0))
+                {
+                    return "(" + output + ")^0";
                 }
 
                 // Reformats the formula to show the new exponent.
