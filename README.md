@@ -21,3 +21,7 @@ calculator.
 
 Every button has a corresponding keyboard key. Most of them work, but I haven't figured out
 how to get event handling to work with a shift key, yet.
+
+# To Run
+
+Open project solution in Visual Studio and run from there.
