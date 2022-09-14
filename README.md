@@ -24,4 +24,4 @@ how to get event handling to work with a shift key, yet.
 
 # To Run
 
-Open project solution in Visual Studio and run from there.
+Open project solution in Visual Studio, set startup project to GUI, and run in release mode.
